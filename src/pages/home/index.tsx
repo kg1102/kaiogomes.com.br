@@ -19,7 +19,7 @@ const Container = styled.div`
             border-radius: 15px;
             justify-content: center;
             align-items: center;
-            background-image: url("https://vgnoticias.nyc3.digitaloceanspaces.com/storage/webdisco/2021/05/05/1200x900/1d23896d293e4c4b2e3fe0dfdf6c43f5.jpg");
+            background-image: url("https://www.gifcen.com/wp-content/uploads/2022/01/hacker-gif-5.gif");
             background-position: center;
             background-size: 100%;
             background-repeat: no-repeat;
