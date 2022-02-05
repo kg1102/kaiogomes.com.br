@@ -1,8 +1,6 @@
-import { useState } from 'react';
-import Button from '../../components/button/index';
 import {Header} from '../../components/header/index';
 import {Card} from '../../components/card/index';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 import '../../styles/index.css';
 

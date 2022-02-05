@@ -1,9 +1,3 @@
-import {
-    useState
-} from "react";
-import {
-    useNavigate
-} from "react-router";
 import styled from "styled-components";
 
 const ContainerHeader = styled.div`
@@ -31,7 +25,6 @@ const ContainerHeader = styled.div`
 `;
 
 export function Header() {
-    const history = useNavigate();
     return (
         <>
             <ContainerHeader>
