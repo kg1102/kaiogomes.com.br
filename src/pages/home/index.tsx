@@ -21,7 +21,7 @@ const Container = styled.div`
             border-radius: 15px;
             justify-content: center;
             align-items: center;
-            background-image: url("https://mathematic.tv/wp-content/uploads/2020/01/S%C3%A9quence-08-preview-1300x0-c-default.jpg");
+            background-image: url("https://vgnoticias.nyc3.digitaloceanspaces.com/storage/webdisco/2021/05/05/1200x900/1d23896d293e4c4b2e3fe0dfdf6c43f5.jpg");
             background-position: center;
             background-size: 100%;
             background-repeat: no-repeat;
