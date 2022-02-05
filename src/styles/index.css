@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #16151f no-repeat center center fixed;
+  background-size: cover;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
