@@ -54,13 +54,15 @@ const Container = styled.div`
 
             .blogs__wrapper {
                 display: flex;
-                justify-content: center;
+                font-size: 0;
+                flex-wrap:wrap;
+                /* margin:-10px 0 0 -10px; */
                 gap: 2rem;
             }
         }
     }
 
-    @media screen and (max-width: 939px){
+    /* @media screen and (max-width: 939px){
         #blogs {
             .blogs__container {
                 .blogs__wrapper {
@@ -68,10 +70,11 @@ const Container = styled.div`
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    
                 }
             }
         }
-    }
+    } */
 
 `;
 
@@ -93,10 +96,13 @@ export function Homepage(){
                     <div className="blogs__container">
                         <h1>Blog posts</h1>
                         <div className="blogs__wrapper">
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                            <Card/>
+                            <Card title=""/>
+                            <Card title="admin"/>
+                            <Card title="admin"/>
+                            <Card title="admin"/>
+                            <Card title="admin"/>
+                            <Card title="admin"/>
+                            <Card title="admin"/>
                         </div>
                     </div>
                 </section>

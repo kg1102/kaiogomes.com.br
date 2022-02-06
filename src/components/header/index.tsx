@@ -6,6 +6,7 @@ const ContainerHeader = styled.div`
     justify-content: space-between;
     height: 5.5rem;
     align-items: center;
+    padding: 1rem 2rem;
 
     .header__logo {
         font-size: 2rem;
@@ -20,8 +21,8 @@ const ContainerHeader = styled.div`
         align-items: center;
         gap: 2rem;
         list-style: none;
+        cursor: pointer;
     }
-
 `;
 
 export function Header() {
@@ -33,8 +34,8 @@ export function Header() {
                 </div>
                 <div className="header__nav">
                     <ul>
-                        <li>Home</li>
-                        <li>Blog</li>
+                        <li><p>Home</p></li>
+                        <li><p>Blog</p></li>
                     </ul>
                 </div>
             </ContainerHeader> 
