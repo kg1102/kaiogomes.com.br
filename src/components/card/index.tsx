@@ -1,4 +1,7 @@
+import { Navigate } from 'react-router';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router';
+
 
 const CardContainer = styled.div`
     background-color: black;
@@ -47,13 +50,16 @@ const CardContainer = styled.div`
 `;
 
 interface CardProps {
-    title: String
+    title: String,
+    path: String
 }
 
 export function Card(props: CardProps) {
+    const navigate = useNavigate();
+
     return (
         <CardContainer>
-            <div className="card">
+            <div className="card" onClick={() => navigate(`${props.path}`)}>
                 <div className="card__content">
                     <h1 className="card__title">{props.title}</h1>
                 </div>
