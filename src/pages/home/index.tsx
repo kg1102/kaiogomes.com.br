@@ -1,6 +1,9 @@
+import '../../global.d';
 import {Header} from '../../components/header/index';
 import {Card} from '../../components/card/index';
 import styled from 'styled-components';
+import TawkTo from 'tawkto-react';
+import { useEffect } from 'react';
 
 import '../../styles/index.css';
 
@@ -76,6 +79,9 @@ const Container = styled.div`
 
 
 export function Homepage(){
+
+    useEffect(() => new TawkTo("614690f425797d7a89ffb0f5", "1fftqcer5"), [])
+
     return (
         <>
             <Header/>
