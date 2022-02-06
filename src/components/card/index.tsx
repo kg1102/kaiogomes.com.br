@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
 
 
 const CardContainer = styled.div`
@@ -54,8 +55,8 @@ const CardContainer = styled.div`
 `;
 
 interface CardProps {
+    path_id: String,
     title: String,
-    path: String,
     image: String
 }
 
@@ -64,7 +65,7 @@ export function Card(props: CardProps) {
 
     return (
         <CardContainer>
-            <div className="card" style={{backgroundImage: `url("${props.image}")`}} onClick={() => navigate(`${props.path}`)}> 
+            <div className="card" style={{backgroundImage: `url("${props.image}")`}} onClick={() => navigate(`/blog/${props.path_id}`)}> 
                 <div className="card__content">
                     <h1 className="card__title">{props.title}</h1>
                 </div>
