@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router";
 
 const ContainerHeader = styled.div`
     display: flex;
@@ -9,6 +10,7 @@ const ContainerHeader = styled.div`
     padding: 1rem 2rem;
 
     .header__logo {
+        cursor: pointer;
         font-size: 2rem;
         span {
             color: #504eff;
@@ -26,10 +28,11 @@ const ContainerHeader = styled.div`
 `;
 
 export function Header() {
+    const navigate = useNavigate();
     return (
         <>
             <ContainerHeader>
-                <div className="header__logo">
+                <div className="header__logo" onClick={()=>navigate('/')}>
                     <p><span>K</span>aio<span>G</span>omes</p>
                 </div>
                 <div className="header__nav">
