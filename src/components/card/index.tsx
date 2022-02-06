@@ -25,7 +25,7 @@ const CardContainer = styled.div`
 
     .card {
         cursor: pointer;
-        background-image:  url("https://i.pinimg.com/236x/83/cd/af/83cdaf6a1719cb697137b089fee26e3c.jpg");
+        
         background-position: center;
         background-size: 100%;
         background-repeat: no-repeat;
@@ -48,14 +48,15 @@ const CardContainer = styled.div`
 
     .card:hover {
         transition: 0.5s ease all;
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
 
 `;
 
 interface CardProps {
     title: String,
-    path: String
+    path: String,
+    image: String
 }
 
 export function Card(props: CardProps) {
@@ -63,7 +64,7 @@ export function Card(props: CardProps) {
 
     return (
         <CardContainer>
-            <div className="card" onClick={() => navigate(`${props.path}`)}> 
+            <div className="card" style={{backgroundImage: `url("${props.image}")`}} onClick={() => navigate(`${props.path}`)}> 
                 <div className="card__content">
                     <h1 className="card__title">{props.title}</h1>
                 </div>

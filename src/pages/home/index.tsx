@@ -44,6 +44,7 @@ const Container = styled.div`
     }
 
     #blogs {
+        padding: 1rem 2rem;
         .title {
             color: #fff;
             font-family: 'Poppins', sans-serif;
@@ -81,6 +82,17 @@ export function Homepage(){
 
     useEffect(() => new TawkTo("614690f425797d7a89ffb0f5", "1fftqcer5"), [])
 
+
+    // api.get('/api/v1/posts').so
+    const posts = [
+        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://i.pinimg.com/236x/83/cd/af/83cdaf6a1719cb697137b089fee26e3c.jpg"},
+        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://static.poder360.com.br/2020/06/Bolsonaro-1.jpg"},
+        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://pbs.twimg.com/media/Ekd2E_OXUAE2QmV.jpg"},
+        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://pbs.twimg.com/media/EeTC348XYAAryih.jpg"},
+        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://pbs.twimg.com/media/EbnUm4oXQAAg_p0?format=jpg&name=large"},
+        {"title":"NAO ESTA LISTADO TEST.TEST.TEST.TEST.TEST.TEST\x00", "path":"/data", "image":"https://i.pinimg.com/236x/83/cd/af/83cdaf6a1719cb697137b089fee26e3c.jpg"},
+    ]
+
     return (
         <>
             <Header/>
@@ -97,13 +109,13 @@ export function Homepage(){
                     <h1 className="title">Blog posts</h1>
                     <div className="blogs__container">
                         <div className="blogs__wrapper">
-                            <Card path="/1"  title="HACKED BY 0xdln"/>
-                            <Card path="/2"  title="HACKED BY 0xdln"/>
-                            <Card path="/3"  title="HACKED BY 0xdln"/>
-                            <Card path="/4"  title="HACKED BY 0xdln"/>
-                            <Card path="/5"  title="HACKED BY 0xdln"/>
-                            <Card path="/6"  title="HACKED BY 0xdln"/>
-                            <Card path="/7"  title="HACKED BY 0xdln"/>
+                            {posts.slice(0, 5).map((result) => {
+                                return <Card 
+                                    path={result.path}
+                                    title={result.title}
+                                    image={result.image}
+                                />
+                            })}
                         </div>
                     </div>
                 </section>
