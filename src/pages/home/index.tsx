@@ -1,4 +1,3 @@
-import '../../global.d';
 import {Header} from '../../components/header/index';
 import {Card} from '../../components/card/index';
 import styled from 'styled-components';
