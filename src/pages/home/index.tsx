@@ -78,19 +78,17 @@ const Container = styled.div`
 `;
 
 
-export function Homepage(){
-
+export function HomePage(){
     useEffect(() => new TawkTo("614690f425797d7a89ffb0f5", "1fftqcer5"), [])
-
 
     // api.get('/api/v1/posts').so
     const posts = [
-        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://i.pinimg.com/236x/83/cd/af/83cdaf6a1719cb697137b089fee26e3c.jpg"},
-        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://static.poder360.com.br/2020/06/Bolsonaro-1.jpg"},
-        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://pbs.twimg.com/media/Ekd2E_OXUAE2QmV.jpg"},
-        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://pbs.twimg.com/media/EeTC348XYAAryih.jpg"},
-        {"title":"HACKED BY 0XDLN", "path":"/data", "image":"https://pbs.twimg.com/media/EbnUm4oXQAAg_p0?format=jpg&name=large"},
-        {"title":"NAO ESTA LISTADO TEST.TEST.TEST.TEST.TEST.TEST\x00", "path":"/data", "image":"https://i.pinimg.com/236x/83/cd/af/83cdaf6a1719cb697137b089fee26e3c.jpg"},
+        {"id":"1", "title":"%%25%25%33%37%25%34%32%25%25%33%37%25%34%32%25%25%33%37%25%34%32", "image":"https://i.pinimg.com/236x/83/cd/af/83cdaf6a1719cb697137b089fee26e3c.jpg"},
+        {"id":"2", "title":"%%37%42%%37%42%%37%42", "image":"https://epipoca.com.br/wp-content/uploads/2021/02/Patrick-em-Bob-Esponja-Calca-Quadrada-Reproducao-1200x900.jpg"},
+        {"id":"3", "title":"%%37%42%%37%42%%37%42", "image":"https://pbs.twimg.com/media/Ekd2E_OXUAE2QmV.jpg"},
+        {"id":"4", "title":"%%37%42%%37%42%%37%42", "image":"https://pbs.twimg.com/media/EeTC348XYAAryih.jpg"},
+        {"id":"5", "title":"%%37%42%%37%42%%37%42", "image":"https://pbs.twimg.com/media/EbnUm4oXQAAg_p0?format=jpg&name=large"},
+        {"id":"6", "title":"%%37%42%%37%42%%37%42", "image":"https://i.pinimg.com/236x/83/cd/af/83cdaf6a1719cb697137b089fee26e3c.jpg"}
     ]
 
     return (
@@ -101,7 +99,7 @@ export function Homepage(){
                     <div className="box__container">
                         <div className="box__main">
                             <h1 className="box__title">Kaio Gomes</h1>
-                            <h3 className="box__description">CyberSec Enthusiast</h3>
+                            <h3 className="box__description">CyberSec Enthusiast | BugHunter</h3>
                         </div>
                     </div>
                 </section>
@@ -109,9 +107,10 @@ export function Homepage(){
                     <h1 className="title">Blog posts</h1>
                     <div className="blogs__container">
                         <div className="blogs__wrapper">
-                            {posts.slice(0, 5).map((result) => {
-                                return <Card 
-                                    path={result.path}
+                            {posts.slice(0, 5).map((result, key) => {
+                                return <Card
+                                    key={key}
+                                    path_id={result.id}
                                     title={result.title}
                                     image={result.image}
                                 />
