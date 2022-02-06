@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { useNavigate } from 'react-router';
-import { useEffect } from 'react';
 
 
 const CardContainer = styled.div`
