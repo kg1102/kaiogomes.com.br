@@ -42,21 +42,17 @@ const Container = styled.div`
     }
 
     #blogs {
+        .title {
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            align-content: center;
+        }
         .blogs__container {
-
-            h1 {
-                color: #fff;
-                font-family: 'Poppins', sans-serif;
-                font-size: 2rem;
-                text-align: center;
-                align-content: center;
-            }
-
             .blogs__wrapper {
                 display: flex;
-                font-size: 0;
-                flex-wrap:wrap;
-                /* margin:-10px 0 0 -10px; */
+                flex-wrap: wrap;
                 gap: 2rem;
             }
         }
@@ -93,16 +89,16 @@ export function Homepage(){
                     </div>
                 </section>
                 <section id="blogs">
+                    <h1 className="title">Blog posts</h1>
                     <div className="blogs__container">
-                        <h1>Blog posts</h1>
                         <div className="blogs__wrapper">
-                            <Card title=""/>
-                            <Card title="admin"/>
-                            <Card title="admin"/>
-                            <Card title="admin"/>
-                            <Card title="admin"/>
-                            <Card title="admin"/>
-                            <Card title="admin"/>
+                            <Card title="HOW I HACKED NASA WEBSITE IN 10 MINUTES????"/>
+                            <Card title="How I found 20 ATO in 5 minutes?"/>
+                            <Card title="How I found 100 IDOR in 1 DAY?"/>
+                            <Card title="HOW I FOUND 2 VULNERABILITIES ON FACEBOOK AND GOOGLE?"/>
+                            <Card title="HOW TO DO PARAMETER POLLUTION"/>
+                            <Card title="HOW TO EXPLORE GRAPHQL?"/>
+                            <Card title="HOW GET PRIVATE PROGRAMS TO BUGBOUNTY?"/>
                         </div>
                     </div>
                 </section>
