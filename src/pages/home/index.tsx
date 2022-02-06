@@ -92,15 +92,18 @@ export function Homepage(){
                     <h1 className="title">Blog posts</h1>
                     <div className="blogs__container">
                         <div className="blogs__wrapper">
-                            <Card path="pota2to-29jh3jgg"  title="HOW I HACKED NASA WEBSITE IN 10 MINUTES????"/>
-                            <Card path="po1tato-hh3jgg"  title="How I found 20 ATO in 5 minutes?"/>
-                            <Card path="po3tat3o-19jtjgg"  title="How I found 100 IDOR in 1 DAY?"/>
-                            <Card path="po5tato-23h2jgg"  title="HOW I FOUND 2 VULNERABILITIES ON FACEBOOK AND GOOGLE?"/>
-                            <Card path="pto1tato-29jh2gg" title="HOW TO DO PARAMETER POLLUTION"/>
-                            <Card path="potato-29jtjgg" title="HOW TO EXPLORE GRAPHQL?"/>
-                            <Card path="po2ttato-29uijjr" title="HOW GET PRIVATE PROGRAMS TO BUGBOUNTY?"/>
+                            <Card path="/1"  title="HACKED BY 0xdln"/>
+                            <Card path="/2"  title="HACKED BY 0xdln"/>
+                            <Card path="/3"  title="HACKED BY 0xdln"/>
+                            <Card path="/4"  title="HACKED BY 0xdln"/>
+                            <Card path="/5"  title="HACKED BY 0xdln"/>
+                            <Card path="/6"  title="HACKED BY 0xdln"/>
+                            <Card path="/7"  title="HACKED BY 0xdln"/>
                         </div>
                     </div>
+                </section>
+                <section id="news">
+                    <br/>
                 </section>
             </Container>
         </>

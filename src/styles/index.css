@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   -webkit-font-smoothing: antialiased;
   background: #16151f no-repeat center center fixed;
@@ -11,4 +12,22 @@ body {
   height: 100vh;
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
+}
+
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Cor do indicador de rolagem */
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+  border-radius: 15px;
+  background-color: #bac0c4;
+}
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: #717171;
 }

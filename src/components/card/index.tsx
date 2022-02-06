@@ -26,7 +26,6 @@ const CardContainer = styled.div`
 
     .card {
         cursor: pointer;
-        background-color: red;
         background-image:  url("https://i.pinimg.com/236x/83/cd/af/83cdaf6a1719cb697137b089fee26e3c.jpg");
         background-position: center;
         background-size: 100%;
@@ -36,6 +35,12 @@ const CardContainer = styled.div`
         box-shadow: inset 0px 0px 400px 510px rgba(0, 0, 0, .7);
         .card__content {
             .card__title {
+                overflow: hidden;
+                white-space: pre-wrap;      /* CSS3 */   
+                white-space: -moz-pre-wrap; /* Firefox */    
+                white-space: -pre-wrap;     /* Opera <7 */   
+                white-space: -o-pre-wrap;   /* Opera 7 */    
+                word-wrap: break-word;      /* IE */
                 padding: 2rem 2rem;
                 color: white;
             }
@@ -59,7 +64,7 @@ export function Card(props: CardProps) {
 
     return (
         <CardContainer>
-            <div className="card" onClick={() => navigate(`${props.path}`)}>
+            <div className="card" onClick={() => navigate(`${props.path}`)}> 
                 <div className="card__content">
                     <h1 className="card__title">{props.title}</h1>
                 </div>
