@@ -25,7 +25,6 @@ const CardContainer = styled.div`
 
     .card {
         cursor: pointer;
-        
         background-position: center;
         background-size: 100%;
         background-repeat: no-repeat;
@@ -42,6 +41,7 @@ const CardContainer = styled.div`
                 word-wrap: break-word;      /* IE */
                 padding: 2rem 2rem;
                 color: white;
+                font-size: 1.1rem;
             }
         }
     }
