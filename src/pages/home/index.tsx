@@ -1,3 +1,4 @@
+import {Button} from '../../components/button/index';
 import {Header} from '../../components/header/index';
 import {Card} from '../../components/card/index';
 import styled from 'styled-components';
@@ -5,6 +6,7 @@ import TawkTo from 'tawkto-react';
 import { useEffect } from 'react';
 
 import '../../styles/index.css';
+import { useNavigate } from 'react-router';
 
 const Container = styled.div`
     display: flex;
@@ -79,6 +81,9 @@ const Container = styled.div`
 
 
 export function HomePage(){
+
+    const navigate = useNavigate();
+
     useEffect(() => new TawkTo("614690f425797d7a89ffb0f5", "1fftqcer5"), [])
 
     // api.get('/api/v1/posts').so
@@ -147,9 +152,13 @@ export function HomePage(){
                             })}
                         </div>
                     </div>
+                    <Button
+                        onClick={() => navigate('/blog')}
+                        style={{marginTop: '25px'}}
+                    >Ver mais postagens</Button>
                 </section>
                 <section id="news">
-                    <br/>
+                        {/**/}
                 </section>
             </Container>
         </>
