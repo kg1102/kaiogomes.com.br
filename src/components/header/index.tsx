@@ -37,8 +37,8 @@ export function Header() {
                 </div>
                 <div className="header__nav">
                     <ul>
-                        <li><p>Home</p></li>
-                        <li><p>Blog</p></li>
+                        <li><p onClick={()=>navigate("#home")}>Home</p></li>
+                        <li><p onClick={()=>navigate("#blog")}>Blog</p></li>
                     </ul>
                 </div>
             </ContainerHeader> 
