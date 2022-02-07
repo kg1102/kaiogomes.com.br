@@ -10,7 +10,7 @@ const CardContainer = styled.div`
     flex-grow: 1;
     width: calc(100% * (1/4) - 10px - 1px);
     box-shadow: -2px -2px 4px;
-    background-color: black; 
+    background-color: black;
 
 
     @media screen and (max-width: 939px){
@@ -51,7 +51,7 @@ const CardContainer = styled.div`
                 padding: 0.3rem 2rem;
                 color: #FFF;
                 margin: 0 5%;
-                background-color: #4e2470;
+                background-color: #2038bb;
                 border-radius: 10px;
             }
         }
