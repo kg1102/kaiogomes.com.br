@@ -33,9 +33,8 @@ const CardContainer = styled.div`
         border-radius: 15px;  
         height: 100%;
         box-shadow: inset 0px 0px 400px 510px rgba(0, 0, 0, .7);
-        .card__content {
-            /* display: flex; */
-            /* justify-content: space-between; */
+        filter: grayscale(100%);
+        .card__content 
             .card__title {
                 overflow: hidden;
                 white-space: pre-wrap;      /* CSS3 */   
@@ -61,6 +60,7 @@ const CardContainer = styled.div`
         transition: 0.5s ease all;
         -webkit-transform: translateY(-5px);
         transform: translateY(-5px);
+        filter: grayscale(0%);
     }
 
 `;
@@ -83,7 +83,6 @@ export function Card(props: CardProps) {
             > 
                 <div className="card__content">
                     <h1 className="card__title">{props.title}</h1>
-                    <span className="card__author">Kaio Gomes</span>
                 </div>
             </div>
         </CardContainer>
