@@ -23,7 +23,40 @@ const ContainerHeader = styled.div`
         align-items: center;
         gap: 2rem;
         list-style: none;
-        cursor: pointer;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .header__nav {
+        ul{
+            li{
+                text-align: center;
+                p {
+                    transition: color 0.2s;
+                    position: relative;
+                }
+                p:hover {
+                    cursor: pointer;
+                    color: #ffffff;
+                    transition: 0.5 all ease;
+                }
+
+                p::after {
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    background: #ffffff;
+                    position: absolute;
+                    left: 0;
+                    bottom: -0.5rem;
+                    transition: width 0.2s;
+                }
+
+                p:hover::after,
+                p.active::after {
+                    width: 100%;
+                }
+            }
+        }
     }
 `;
 
