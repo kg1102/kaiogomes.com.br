@@ -5,8 +5,12 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import { useEffect } from 'react';
+import { useParams } from 'react-router';
 
 export function BlogPage(){
+    const params = useParams();
+
     const Container = styled.div`
         #blog {
             padding: 3rem 2.5rem;
@@ -139,6 +143,25 @@ export function BlogPage(){
                 }
             }
         }
+
+        #blogs {
+            padding: 1rem 2rem;
+            .title {
+                color: #fff;
+                font-family: 'Poppins', sans-serif;
+                font-size: 2rem;
+                text-align: center;
+                align-content: center;
+            }
+            .blogs__container {
+                .blogs__wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                }
+            }
+        }
+
     `;
 
     const markdown = `
@@ -159,6 +182,17 @@ A exploração bem-sucedida do defeito pode ter sérias consequências, desde o 
 
 A cadeia de suprimentos de software emergiu como uma grande ameaça à segurança após ataques que exploram SolarWinds, Kaseya e Log4j nos últimos anos. Em julho de 2021, a Intezer divulgou que os invasores estão aproveitando as instâncias Argo Workflows mal configuradas para descartar criptomineradores em clusters Kubernetes (K8s).
 `;
+
+    useEffect(() =>{
+        if(params.id !== undefined){
+            // api.get('/api/v1/posts/{id_aq}')
+            alert('existe um ID na URL!');
+        }else{
+            // api.get('/api/v1/posts')
+            alert('não existe um ID na URL!');
+
+        }
+    }, [params.id])
     
     // api.get('/api/v1/posts/1').so
     const posts = [
@@ -173,9 +207,6 @@ A cadeia de suprimentos de software emergiu como uma grande ameaça à seguranç
     return (
         <>
             <Header/>
-
-
-
             <Container>
                 <section id="blog">
                     {posts.map((value)=>{

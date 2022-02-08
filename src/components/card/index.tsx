@@ -45,7 +45,7 @@ const CardContainer = styled.div`
                 word-wrap: break-word;      /* IE */
                 padding: 2rem 2rem;
                 color: white;
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             .card__author {
                 padding: 0.3rem 2rem;
@@ -76,10 +76,14 @@ export function Card(props: CardProps) {
 
     return (
         <CardContainer>
-            <div className="card" style={{backgroundImage: `url("${props.image}")`}} onClick={() => navigate(`/blog/${props.path_id}`)}> 
+            <div 
+                className="card" 
+                style={{backgroundImage: `url("${props.image}")`}} 
+                onClick={() => navigate(`/blog/${props.path_id}`)}
+            > 
                 <div className="card__content">
                     <h1 className="card__title">{props.title}</h1>
-                    <span className="card__author">Author: Kaio Gomes</span>
+                    <span className="card__author">Kaio Gomes</span>
                 </div>
             </div>
         </CardContainer>
