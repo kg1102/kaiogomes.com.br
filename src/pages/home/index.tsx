@@ -72,7 +72,13 @@ export function HomePage(){
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => new TawkTo("614690f425797d7a89ffb0f5", "1fftqcer5"), [])
+    useEffect(() => {
+        new TawkTo("614690f425797d7a89ffb0f5", "1fftqcer5")
+        var x = 0;
+        if(x === 1){
+            setLoading(true);
+        }
+    }, [])
 
     // api.get('/api/v1/posts').so
     const posts = [
