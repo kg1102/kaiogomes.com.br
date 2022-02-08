@@ -190,7 +190,6 @@ A cadeia de suprimentos de software emergiu como uma grande ameaça à seguranç
         }else{
             // api.get('/api/v1/posts')
             alert('não existe um ID na URL!');
-
         }
     }, [params.id])
     
