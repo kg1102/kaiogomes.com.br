@@ -28,11 +28,11 @@ const CardContainer = styled.div`
     .card {
         cursor: pointer;
         background-position: center;
-        background-size: 100%;
+        /* background-size: auto 100%; */
         background-repeat: no-repeat;
         border-radius: 15px;  
         height: 100%;
-        box-shadow: inset 0px 0px 400px 510px rgba(0, 0, 0, .7);
+        box-shadow: inset 0px 0px 400px 510px rgba(0, 0, 0, .8);
         filter: grayscale(100%);
         .card__content 
             .card__title {
