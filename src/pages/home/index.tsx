@@ -70,7 +70,7 @@ const Container = styled.div`
 
 export function HomePage(){
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         new TawkTo("614690f425797d7a89ffb0f5", "1fftqcer5");
@@ -78,6 +78,9 @@ export function HomePage(){
         if(x === 1){
             setLoading(true);
         }
+        setTimeout(()=>{
+            setLoading(false);
+        }, 2000);
     }, [])
 
     // api.get('/api/v1/posts').so
@@ -145,6 +148,7 @@ export function HomePage(){
                                     viewBox="0 0 400 460"
                                     backgroundColor={'#c7c7c7'}
                                     foregroundColor={'#757575'}
+                                    cursor={'wait'}
                                 >
                                     <rect x="0" y="60" rx="10" ry="10" width="400" height="280" />
                                 </ContentLoader>
@@ -155,6 +159,7 @@ export function HomePage(){
                                     viewBox="0 0 400 460"
                                     backgroundColor={'#c7c7c7'}
                                     foregroundColor={'#757575'}
+                                    cursor={'wait'}
                                 >
                                     <rect x="0" y="60" rx="10" ry="10" width="400" height="280" />
                                 </ContentLoader>
@@ -165,6 +170,7 @@ export function HomePage(){
                                     viewBox="0 0 400 460"
                                     backgroundColor={'#c7c7c7'}
                                     foregroundColor={'#757575'}
+                                    cursor={'wait'}
                                 >
                                     <rect x="0" y="60" rx="10" ry="10" width="400" height="280" />
                                 </ContentLoader>
