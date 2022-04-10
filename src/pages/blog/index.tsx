@@ -9,6 +9,10 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import ContentLoader from "react-content-loader";
 
+
+import Api from '../../Api';
+
+
 declare global {
     namespace JSX {
         interface IntrinsicElements {
@@ -20,6 +24,7 @@ declare global {
 export function BlogPage(){
     const params = useParams();
     const [loading, setLoading] = useState(false);
+    const [post, setPost] = useState<any[]>([]);
 
     const Container = styled.div`
         #blog {
@@ -40,9 +45,8 @@ export function BlogPage(){
                 border-radius: 10px;
                 object-fit: cover;
                 user-select: none;
-                width: 70%;
-                max-width: 100%;
-                height: auto;
+                width: 100%;
+                height: 25rem;
                 border-shadow: 0px 0px 4px;
                 transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); //ease-out-cubic
                 &:hover {
@@ -216,32 +220,27 @@ export function BlogPage(){
 
     `;
 
+    
     useEffect(() =>{
         if(params.id !== undefined){
-            // api.get('/api/v1/posts/{id_aq}')
-            // alert('existe um ID na URL!');
+            const getPosts = async () => {
+                let data: any = await Api.getPosts(params.id);
+                setPost(data);
+            }
+            setLoading(false);
+            getPosts();
         }else{
-            // api.get('/api/v1/posts')
-            // alert('não existe um ID na URL!');
+            console.log("listar todos os posts em fileira --> todo");
         }
     }, [params.id])
-    
-    // api.get('/api/v1/posts/1').so
-    const posts = [
-        {
-            "id":"1", 
-            "title":"batata frita e realmente bom", 
-            "image":"https://thehackernews.com/new-images/img/a/AVvXsEiwCWHZEq98c7B3Tzaxql5QIUtN3FdC_AToAt84-qZ7mg5BpVHifHC4wxmpsTCFdoLbusLlOQOKVAiuF8SFl1Gx8wzCBhJqBJKtdBVEtIJhd1yFYwIBVogpGtlswGMiCTk6clqdsHuAkyr6Nz1tZ6w3hFSfEDYNeQJwh57Drm7TdIdoKQ4Mzsz7Y1Au=s728-e1000",
-            "description":"# potato,sim\n\n<iframe id=\"odysee-iframe\" width=\"560\" height=\"315\" src=\"https://odysee.com/$/embed/odysee/7a416c44a6888d94fe045241bbac055c726332aa?r=Bx3gUd9m2bFfaTTkLN71qtw3xWGQJWwC\" allowfullscreen></iframe> \n\nbatata frita é bom, e eu vou te provar\n\n\n# Ingredientes\n\n* batata frita\n* e mais batata fritas\n\n\n```js\n\nconsole.log(\"batata frita é bom\");\n\n```"
-        }
-    ]
+
 
     return (
         <>
             <Header/>
             <Container>
                 <section id="blog">
-                    {posts.map((value)=>{   
+                    {post.map((value)=>{   
                         return (
                             <>
                                 {loading ?
