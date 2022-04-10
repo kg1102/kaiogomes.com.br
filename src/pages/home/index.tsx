@@ -24,7 +24,7 @@ const Container = styled.div`
             border-radius: 15px;
             justify-content: center;
             align-items: center;
-            background-image:  url("https://www.gifcen.com/wp-content/uploads/2022/01/hacker-gif-5.gif");
+            background-image:  url("https://api.creavite.co/out/cs6ZfZOeV3ra45xo_static.png");
             background-position: center;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -151,18 +151,7 @@ export function HomePage(){
                                     cursor={'wait'}
                                 >
                                     <rect x="0" y="60" rx="10" ry="10" width="400" height="280" />
-                                </ContentLoader>
-                                <ContentLoader 
-                                    speed={2}
-                                    width={400}
-                                    height={460}
-                                    viewBox="0 0 400 460"
-                                    backgroundColor={'#c7c7c7'}
-                                    foregroundColor={'#757575'}
-                                    cursor={'wait'}
-                                >
-                                    <rect x="0" y="60" rx="10" ry="10" width="400" height="280" />
-                                </ContentLoader>
+                                </ContentLoader>                               
                                 <ContentLoader 
                                     speed={2}
                                     width={400}
