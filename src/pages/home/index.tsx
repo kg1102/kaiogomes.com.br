@@ -78,14 +78,11 @@ export function HomePage(){
     useEffect(() => {
         new TawkTo("614690f425797d7a89ffb0f5", "1fftqcer5");
         const getPosts = async () => {
-            let data: any = await Api.getPosts();
-            console.log(data);
+            let data: any = await Api.getPosts(undefined);
             setPosts(data);
             setLoading(false);
         }
-        setInterval(()=>{
-            getPosts();
-        }, 5000);
+        getPosts();
     }, [])
     return (
         <>
